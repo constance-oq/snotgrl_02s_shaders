@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://c8sx00mvceh2o"]
+
+[ext_resource type="Shader" path="res://shaders/dot_shade_example.gdshader" id="1_exxgm"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_exxgm")
+shader_parameter/dottiness = 0.7
+shader_parameter/dot_softness = 0.2
+shader_parameter/dot_radius = 0.005

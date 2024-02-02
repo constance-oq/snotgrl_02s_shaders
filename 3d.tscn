@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3 uid="uid://c0uqbd167lj4d"]
+
+[ext_resource type="Material" uid="uid://gfeibv7fe1uc" path="res://shaders/cross_hatch_example_mat.tres" id="1_e6mx0"]
+[ext_resource type="ArrayMesh" uid="uid://da0fmo14krqfc" path="res://teapot.obj" id="2_u5k0w"]
+[ext_resource type="Material" uid="uid://c8sx00mvceh2o" path="res://shaders/dot_shade_example_mat.tres" id="3_l3kix"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_eac0l"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_k1bu4"]
+radial_segments = 16
+rings = 8
+
+[node name="3d" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.0315852, 0.0174437, 0.999349, -6.71066e-10, 0.999848, -0.0174524, -0.999501, -0.000551238, -0.0315804, 1.462, 0.38, 0.038)
+
+[node name="Cyoob" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.0268388, -0.0137281, -0.799432, -0.00153568, 0.79988, -0.0137873, 0.799548, 0.00199714, 0.0268084, 0.0142866, 0.384537, -1.31709)
+mesh = SubResource("BoxMesh_eac0l")
+skeleton = NodePath("../Camera3D")
+surface_material_override/0 = ExtResource("1_e6mx0")
+
+[node name="Sphear" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.999998, 0.000282534, -0.00196437, 0.000278807, 0.999998, 0.00191175, 0.00196489, 0.0019112, -0.999996, -0.0183657, 0.277658, 1.41971)
+mesh = SubResource("SphereMesh_k1bu4")
+surface_material_override/0 = ExtResource("1_e6mx0")
+
+[node name="Utah" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.772285, 0.000282534, 0.635276, 0.00143235, 0.999998, 0.00129648, -0.635274, 0.0019112, -0.772284, -0.0211757, 0.00197446, 0.02872)
+mesh = ExtResource("2_u5k0w")
+surface_material_override/0 = ExtResource("1_e6mx0")
+surface_material_override/1 = ExtResource("1_e6mx0")
+
+[node name="Cyoob2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.0268388, -0.0137281, -0.799432, -0.00153568, 0.79988, -0.0137873, 0.799548, 0.00199714, 0.0268084, -1.98571, 0.384537, -1.31709)
+mesh = SubResource("BoxMesh_eac0l")
+skeleton = NodePath("../Camera3D")
+surface_material_override/0 = ExtResource("3_l3kix")
+
+[node name="Sphear2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.999998, 0.000282534, -0.00196437, 0.000278807, 0.999998, 0.00191175, 0.00196489, 0.0019112, -0.999996, -2.01837, 0.277658, 1.41971)
+mesh = SubResource("SphereMesh_k1bu4")
+surface_material_override/0 = ExtResource("3_l3kix")
+
+[node name="Utah2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.772285, 0.000282534, 0.635276, 0.00143235, 0.999998, 0.00129648, -0.635274, 0.0019112, -0.772284, -2.02118, 0.00197446, 0.02872)
+mesh = ExtResource("2_u5k0w")
+surface_material_override/0 = ExtResource("3_l3kix")
+surface_material_override/1 = ExtResource("3_l3kix")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.951405, 0.250856, 0.178608, -0.0510165, -0.700384, 0.711941, 0.303689, 0.668232, 0.679146, -0.0127452, 1.46862, 2.71116)
+shadow_enabled = true
+shadow_blur = 0.0
