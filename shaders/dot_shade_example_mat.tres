@@ -5,6 +5,3 @@
 [resource]
 render_priority = 0
 shader = ExtResource("1_exxgm")
-shader_parameter/dottiness = 0.7
-shader_parameter/dot_softness = 0.2
-shader_parameter/dot_radius = 0.005

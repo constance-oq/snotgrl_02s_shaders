@@ -3,7 +3,7 @@
 [ext_resource type="Shader" path="res://shaders/cross_hatch_example.gdshader" id="1_j2cci"]
 
 [sub_resource type="Curve" id="Curve_3q60u"]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.0294627, 0), 0.0, 0.0, 0, 0, Vector2(0.0554593, 0.971148), 0.0, 0.0, 0, 0, Vector2(0.12305, 1), 0.0, 0.0, 0, 0, Vector2(0.180243, 0.946417), 0.0, 0.0, 0, 0, Vector2(0.227036, 0), 0.0, 0.0, 0, 0, Vector2(0.294627, 0), 0.0, 0.0, 0, 0, Vector2(0.320624, 0.546607), 0.0, 0.0, 0, 0, Vector2(0.37435, 0.563094), 0.0, 0.0, 0, 0, Vector2(0.435009, 0.525999), 0.0, 0.0, 0, 0, Vector2(0.461005, 0), 0.0, 0.0, 0, 0, Vector2(0.540728, 0), 0.0, 0.0, 0, 0, Vector2(0.559792, 0.748573), 0.0, 0.0, 0, 0, Vector2(0.613518, 0.76506), 0.0, 0.0, 0, 0, Vector2(0.684575, 0.723843), 0.0, 0.0, 0, 0, Vector2(0.717504, 0), 0.0, 0.0, 0, 0, Vector2(0.797227, 0), 0.0, 0.0, 0, 0, Vector2(0.802426, 0.497146), 0.0, 0.0, 0, 0, Vector2(0.861352, 0.53012), 0.0, 0.0, 0, 0, Vector2(0.930676, 0.472416), 0.0, 0.0, 0, 0, Vector2(0.948007, 0), 0.0, 0.0, 0, 0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.0294627, 0), 0.0, 0.0, 0, 0, Vector2(0.0554593, 0.971148), 0.0, 0.0, 0, 0, Vector2(0.12305, 1), 0.0, 0.0, 0, 0, Vector2(0.180243, 0.946417), 0.0, 0.0, 0, 0, Vector2(0.227036, 0), 0.0, 0.0, 0, 0, Vector2(0.294627, 0), 0.0, 0.0, 0, 0, Vector2(0.320624, 0.546607), 0.0, 0.0, 0, 0, Vector2(0.37435, 0.563094), 0.0, 0.0, 0, 0, Vector2(0.435009, 0.525999), 0.0, 0.0, 0, 0, Vector2(0.461005, 0), 0.0, 0.0, 0, 0, Vector2(0.540728, 0), 0.0, 0.0, 0, 0, Vector2(0.560345, 0.773596), 0.0, 0.0, 0, 0, Vector2(0.614942, 0.788202), 0.0, 0.0, 0, 0, Vector2(0.683908, 0.722472), -0.132042, -0.132042, 0, 0, Vector2(0.717504, 0), 0.0, 0.0, 0, 0, Vector2(0.797227, 0), 0.0, 0.0, 0, 0, Vector2(0.807471, 0.364607), 0.0, 0.0, 0, 0, Vector2(0.873563, 0.37191), 0.0, 0.0, 0, 0, Vector2(0.931034, 0.30618), 0.0, 0.0, 0, 0, Vector2(0.948007, 0), 0.0, 0.0, 0, 0]
 point_count = 21
 
 [sub_resource type="CurveTexture" id="CurveTexture_xpvum"]
@@ -11,21 +11,25 @@ width = 64
 texture_mode = 1
 curve = SubResource("Curve_3q60u")
 
-[sub_resource type="Gradient" id="Gradient_xu3i2"]
-colors = PackedColorArray(0.775063, 0.775063, 0.775063, 1, 1, 1, 1, 1)
+[sub_resource type="Gradient" id="Gradient_wbngt"]
+offsets = PackedFloat32Array(0, 0.596875)
+colors = PackedColorArray(0.787759, 0.787759, 0.787759, 1, 1, 1, 1, 1)
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_or3oh"]
+frequency = 0.05
+fractal_octaves = 1
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_nu7lx"]
-color_ramp = SubResource("Gradient_xu3i2")
+seamless = true
+color_ramp = SubResource("Gradient_wbngt")
 noise = SubResource("FastNoiseLite_or3oh")
 
 [resource]
 render_priority = 0
 shader = ExtResource("1_j2cci")
 shader_parameter/line_size = 0.0125
-shader_parameter/lineyness = 0.7
-shader_parameter/line_softness = 0.02
+shader_parameter/lineyness = 0.6
+shader_parameter/line_softness = 0.07
 shader_parameter/rotation = 0.3
 shader_parameter/line_gradient = SubResource("CurveTexture_xpvum")
 shader_parameter/randomness = SubResource("NoiseTexture2D_nu7lx")

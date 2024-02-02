@@ -2,7 +2,15 @@
 
 float soft_greater( float a, float b, float softness ) {
 	float difference = a - b;
-	float result = ( ( difference / softness ) + 1.0 ) / 2.0;
+	float result = clamp( difference / softness, -1.0, 1.0 );
+	result = ( result + 1.0 ) / 2.0;
+	return result;
+}
+
+float soft_lesser( float a, float b, float softness ) {
+	float difference = b - a;
+	float result = clamp( difference / softness, -1.0, 1.0 );
+	result = ( result + 1.0 ) / 2.0;
 	return result;
 }
 

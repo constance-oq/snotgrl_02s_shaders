@@ -52,4 +52,4 @@ surface_material_override/1 = ExtResource("3_l3kix")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.951405, 0.250856, 0.178608, -0.0510165, -0.700384, 0.711941, 0.303689, 0.668232, 0.679146, -0.0127452, 1.46862, 2.71116)
 shadow_enabled = true
-shadow_blur = 0.0
+shadow_normal_bias = 0.0
