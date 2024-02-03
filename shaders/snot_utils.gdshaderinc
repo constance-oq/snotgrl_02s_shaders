@@ -16,13 +16,12 @@ float soft_lesser( float a, float b, float softness ) {
 
 vec2 rotate(vec2 vector, vec2 pivot, float angle)
 {
+	vec2 result;
 	float sine = sin( angle );
 	float cosine = cos( angle );
 	vector -= pivot;
-	
-	vec2 result;
-	result.x = vector.x * cosine - vector.y * sine;
-	result.y = vector.y * sine + vector.y * cosine;
+	result.x = ( vector.x * cosine ) - ( vector.y * sine );
+	result.y = ( vector.x * sine ) + ( vector.y * cosine );
 	vector += pivot;
 	return result;
 }

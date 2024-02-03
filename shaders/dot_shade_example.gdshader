@@ -10,7 +10,7 @@ void light() {
 	);
 	
 	// Makes the dots vantablack
-	float luminance = 1.0 - ( mask * 1.2 );
+	float luminance = 1.0 - ( mask * 1.3 );
 	
 	DIFFUSE_LIGHT += luminance;
 }
