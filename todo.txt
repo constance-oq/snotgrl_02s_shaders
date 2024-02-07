@@ -1,3 +1,4 @@
 TODO
 
-Next up is colour toon shading.
+Inverted hull outline.
+Specular for toon shader.

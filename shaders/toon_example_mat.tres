@@ -1,0 +1,16 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://chnpsc3s0ptbm"]
+
+[ext_resource type="Shader" path="res://shaders/toon_example.gdshader" id="1_wi5cn"]
+
+[sub_resource type="Gradient" id="Gradient_yetr5"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.57619, 0.771429)
+colors = PackedColorArray(0, 0, 0, 1, 0.43296, 0.3432, 0.66, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_mofxj"]
+gradient = SubResource("Gradient_yetr5")
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_wi5cn")
+shader_parameter/shading_gradient = SubResource("GradientTexture1D_mofxj")

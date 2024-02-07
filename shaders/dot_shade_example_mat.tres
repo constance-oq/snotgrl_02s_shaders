@@ -9,3 +9,5 @@ shader_parameter/dottiness = 0.6
 shader_parameter/dot_softness = 0.2
 shader_parameter/dot_radius = 0.005
 shader_parameter/rotation = 0.3
+shader_parameter/dot_color = Color(-0.3, -0.3, -0.3, 1)
+shader_parameter/blank_color = Color(0, 0, 0, 0)

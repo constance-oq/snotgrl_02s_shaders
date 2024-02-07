@@ -1,0 +1,21 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://b5oixf3lv44o4"]
+
+[ext_resource type="Shader" path="res://shaders/toon_with_dots.gdshader" id="1_qi2di"]
+
+[sub_resource type="Gradient" id="Gradient_yetr5"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.57619, 0.771429)
+colors = PackedColorArray(0, 0, 0, 1, 0.43296, 0.3432, 0.66, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_mofxj"]
+gradient = SubResource("Gradient_yetr5")
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_qi2di")
+shader_parameter/dottiness = 0.6
+shader_parameter/dot_softness = 0.2
+shader_parameter/dot_radius = 0.005
+shader_parameter/rotation = 0.3
+shader_parameter/dot_color = Color(0, 0, 0, 1)
+shader_parameter/shading_gradient = SubResource("GradientTexture1D_mofxj")
