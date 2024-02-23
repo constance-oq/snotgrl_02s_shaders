@@ -1,4 +1,6 @@
 TODO
 
-Inverted hull outline.
 Specular for toon shader.
+More adjustable dots.
+Dot alpha fade-out.
+Customisable per-instance outline material.

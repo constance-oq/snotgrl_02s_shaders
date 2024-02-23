@@ -1,111 +1,6 @@
-[gd_scene load_steps=43 format=3 uid="uid://c0uqbd167lj4d"]
+[gd_scene load_steps=10 format=3 uid="uid://d12x2w7n4ji4a"]
 
-[ext_resource type="Material" uid="uid://gfeibv7fe1uc" path="res://shaders/cross_hatch_example_mat.tres" id="1_e6mx0"]
-[ext_resource type="ArrayMesh" uid="uid://da0fmo14krqfc" path="res://teapot.obj" id="2_u5k0w"]
-[ext_resource type="Material" uid="uid://c8sx00mvceh2o" path="res://shaders/dot_shade_example_mat.tres" id="3_l3kix"]
-[ext_resource type="Material" uid="uid://chnpsc3s0ptbm" path="res://shaders/toon_example_mat.tres" id="5_vue7t"]
-[ext_resource type="Material" uid="uid://b5oixf3lv44o4" path="res://shaders/toon_with_dots.tres" id="7_6k4li"]
-[ext_resource type="Shader" path="res://shaders/toon_with_dots.gdshader" id="9_4bfph"]
-[ext_resource type="Material" uid="uid://bo1ccsso3uol8" path="res://shaders/toon_with_cross_hatch.tres" id="9_svuxh"]
-[ext_resource type="Texture2D" uid="uid://do7oc5bf6wn3a" path="res://display_models/base-arm_BaseColor.1001.png" id="10_wifp3"]
-[ext_resource type="Script" path="res://display_models/arm-display.gd" id="11_27ubv"]
-[ext_resource type="Script" path="res://shaders/outline.gd" id="13_ydg74"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o33hn"]
-albedo_color = Color(1, 0, 0.282353, 1)
-
-[sub_resource type="TextMesh" id="TextMesh_1evhe"]
-material = SubResource("StandardMaterial3D_o33hn")
-text = "CROSS HATCH"
-font_size = 32
-
-[sub_resource type="BoxMesh" id="BoxMesh_eac0l"]
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_lu46i"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_7tfg7"]
-
-[sub_resource type="SphereMesh" id="SphereMesh_k1bu4"]
-radial_segments = 16
-rings = 8
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bb80n"]
-albedo_color = Color(0, 0.556863, 0.592157, 1)
-
-[sub_resource type="TextMesh" id="TextMesh_rtrm4"]
-material = SubResource("StandardMaterial3D_bb80n")
-text = "DOT SHADE"
-font_size = 32
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_exgv6"]
-albedo_color = Color(1, 0.466667, 0, 1)
-
-[sub_resource type="TextMesh" id="TextMesh_mk0ca"]
-material = SubResource("StandardMaterial3D_exgv6")
-text = "TOON"
-font_size = 32
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xay8r"]
-albedo_color = Color(0, 0.811765, 0.270588, 1)
-
-[sub_resource type="TextMesh" id="TextMesh_8hm8i"]
-material = SubResource("StandardMaterial3D_xay8r")
-text = "TOON WITH DOTS"
-font_size = 32
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_audc8"]
-albedo_color = Color(1, 0.784314, 0, 1)
-
-[sub_resource type="TextMesh" id="TextMesh_41eo7"]
-material = SubResource("StandardMaterial3D_audc8")
-text = "TOON WITH HATCH"
-font_size = 32
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pvkw4"]
-albedo_color = Color(1, 0.396078, 0.682353, 1)
-
-[sub_resource type="TextMesh" id="TextMesh_hvi8d"]
-material = SubResource("StandardMaterial3D_pvkw4")
-text = "OUTLINE"
-font_size = 32
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8wnaq"]
-resource_name = "Material"
-albedo_color = Color(0.906332, 0.906332, 0.906332, 1)
-metallic = 0.4
-roughness = 0.272166
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_xb4dk"]
-_surfaces = [{
-"aabb": AABB(-0.01, -0.01, -0.01, 0.02, 0.02, 0.0271231),
-"format": 34896613377,
-"index_count": 84,
-"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 0, 0, 3, 0, 2, 0, 4, 0, 0, 0, 1, 0, 4, 0, 1, 0, 5, 0, 3, 0, 7, 0, 6, 0, 3, 0, 6, 0, 2, 0, 5, 0, 2, 0, 6, 0, 5, 0, 1, 0, 2, 0, 4, 0, 7, 0, 8, 0, 4, 0, 8, 0, 9, 0, 0, 0, 4, 0, 9, 0, 0, 0, 9, 0, 10, 0, 3, 0, 0, 0, 10, 0, 3, 0, 10, 0, 11, 0, 7, 0, 3, 0, 11, 0, 7, 0, 11, 0, 8, 0, 9, 0, 13, 0, 12, 0, 9, 0, 12, 0, 10, 0, 10, 0, 14, 0, 11, 0, 10, 0, 12, 0, 14, 0, 12, 0, 15, 0, 14, 0, 12, 0, 13, 0, 15, 0, 8, 0, 13, 0, 9, 0, 8, 0, 15, 0, 13, 0, 11, 0, 14, 0, 15, 0, 11, 0, 15, 0, 8, 0, 7, 0, 5, 0, 6, 0, 7, 0, 4, 0, 5, 0),
-"name": "Material",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 16,
-"vertex_data": PackedByteArray(52, 183, 52, 183, 196, 188, 0, 0, 52, 183, 52, 183, 255, 255, 0, 0, 52, 183, 202, 72, 255, 255, 0, 0, 52, 183, 202, 72, 196, 188, 0, 0, 202, 72, 52, 183, 196, 188, 0, 0, 202, 72, 52, 183, 255, 255, 0, 0, 202, 72, 202, 72, 255, 255, 0, 0, 202, 72, 202, 72, 196, 188, 0, 0, 0, 0, 0, 0, 196, 188, 0, 0, 0, 0, 255, 255, 196, 188, 0, 0, 255, 255, 255, 255, 196, 188, 0, 0, 255, 255, 0, 0, 196, 188, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_irgit"]
-resource_name = "Root Scene_Cube"
-_surfaces = [{
-"aabb": AABB(-0.01, -0.01, -0.01, 0.02, 0.02, 0.0271231),
-"attribute_data": PackedByteArray(49, 178, 204, 109, 49, 178, 204, 109, 49, 178, 50, 82, 49, 178, 50, 82, 204, 205, 204, 109, 49, 178, 204, 109, 49, 178, 204, 109, 204, 205, 204, 109, 49, 178, 50, 82, 204, 205, 50, 82, 204, 205, 50, 82, 49, 178, 50, 82, 204, 205, 204, 109, 204, 205, 50, 82, 49, 178, 50, 82, 49, 178, 204, 109, 204, 205, 204, 109, 255, 223, 255, 63, 204, 205, 50, 82, 255, 223, 255, 127, 49, 178, 204, 109, 255, 159, 255, 127, 49, 178, 50, 82, 255, 159, 255, 63, 255, 159, 255, 191, 255, 95, 255, 127, 255, 95, 255, 191, 255, 159, 255, 127, 255, 159, 255, 127, 255, 159, 255, 63, 255, 95, 255, 63, 255, 95, 255, 127, 255, 95, 255, 127, 255, 95, 255, 63, 255, 31, 255, 63, 255, 31, 255, 127, 255, 159, 255, 255, 255, 159, 255, 191, 255, 95, 255, 191, 255, 95, 255, 255, 255, 159, 255, 63, 255, 95, 0, 0, 255, 95, 255, 63, 255, 159, 0, 0, 204, 205, 50, 82, 204, 205, 50, 82, 204, 205, 204, 109, 204, 205, 204, 109),
-"format": 34896613399,
-"index_count": 84,
-"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 0, 0, 3, 0, 2, 0, 4, 0, 6, 0, 5, 0, 4, 0, 5, 0, 7, 0, 8, 0, 10, 0, 9, 0, 8, 0, 9, 0, 11, 0, 12, 0, 14, 0, 13, 0, 12, 0, 15, 0, 14, 0, 16, 0, 18, 0, 17, 0, 16, 0, 17, 0, 19, 0, 20, 0, 16, 0, 19, 0, 20, 0, 19, 0, 21, 0, 22, 0, 20, 0, 21, 0, 22, 0, 21, 0, 23, 0, 18, 0, 22, 0, 23, 0, 18, 0, 23, 0, 17, 0, 24, 0, 26, 0, 25, 0, 24, 0, 25, 0, 27, 0, 28, 0, 30, 0, 29, 0, 28, 0, 31, 0, 30, 0, 32, 0, 34, 0, 33, 0, 32, 0, 35, 0, 34, 0, 36, 0, 38, 0, 37, 0, 36, 0, 39, 0, 38, 0, 40, 0, 42, 0, 41, 0, 40, 0, 41, 0, 43, 0, 44, 0, 46, 0, 45, 0, 44, 0, 47, 0, 46, 0),
-"material": SubResource("StandardMaterial3D_8wnaq"),
-"name": "Material",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 48,
-"vertex_data": PackedByteArray(52, 183, 52, 183, 196, 188, 255, 191, 52, 183, 52, 183, 255, 255, 255, 191, 52, 183, 202, 72, 255, 255, 255, 191, 52, 183, 202, 72, 196, 188, 255, 191, 202, 72, 52, 183, 196, 188, 255, 191, 52, 183, 52, 183, 255, 255, 255, 191, 52, 183, 52, 183, 196, 188, 255, 191, 202, 72, 52, 183, 255, 255, 255, 191, 52, 183, 202, 72, 196, 188, 255, 191, 202, 72, 202, 72, 255, 255, 255, 191, 202, 72, 202, 72, 196, 188, 255, 191, 52, 183, 202, 72, 255, 255, 255, 191, 202, 72, 52, 183, 255, 255, 255, 255, 202, 72, 202, 72, 255, 255, 255, 255, 52, 183, 202, 72, 255, 255, 255, 255, 52, 183, 52, 183, 255, 255, 255, 255, 202, 72, 52, 183, 196, 188, 255, 255, 0, 0, 0, 0, 196, 188, 255, 255, 202, 72, 202, 72, 196, 188, 255, 255, 0, 0, 255, 255, 196, 188, 255, 255, 52, 183, 52, 183, 196, 188, 255, 255, 255, 255, 255, 255, 196, 188, 255, 255, 52, 183, 202, 72, 196, 188, 255, 255, 255, 255, 0, 0, 196, 188, 255, 255, 0, 0, 255, 255, 196, 188, 84, 213, 255, 255, 255, 255, 0, 0, 84, 213, 0, 0, 255, 255, 0, 0, 84, 213, 255, 255, 255, 255, 196, 188, 84, 213, 255, 255, 255, 255, 196, 188, 255, 255, 255, 255, 0, 0, 196, 188, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 255, 255, 0, 0, 255, 255, 255, 255, 255, 255, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 196, 188, 255, 191, 0, 0, 255, 255, 196, 188, 255, 191, 0, 0, 255, 255, 0, 0, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 255, 255, 0, 0, 196, 188, 84, 213, 0, 0, 0, 0, 0, 0, 84, 213, 255, 255, 0, 0, 0, 0, 84, 213, 0, 0, 0, 0, 196, 188, 84, 213, 202, 72, 202, 72, 196, 188, 255, 191, 202, 72, 202, 72, 255, 255, 255, 191, 202, 72, 52, 183, 255, 255, 255, 191, 202, 72, 52, 183, 196, 188, 255, 191, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 255, 191, 255, 127, 255, 191, 255, 127, 255, 191, 255, 127, 255, 191, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 170, 42, 84, 213, 170, 42, 84, 213, 170, 42, 84, 213, 170, 42, 84, 213, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_xb4dk")
+[ext_resource type="Script" path="res://display_models/arm-display.gd" id="1_qqkci"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_vm2r8"]
 resource_name = "base-arm_Cube_019"
@@ -1552,224 +1447,27 @@ _data = {
 "punch2": SubResource("Animation_a6sgs")
 }
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3ly3l"]
-albedo_color = Color(1, 0.396078, 0.682353, 1)
-emission_enabled = true
-emission = Color(0.831373, 0, 0, 1)
+[node name="Base-arm-prefab" type="Node3D"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 
-[sub_resource type="TextMesh" id="TextMesh_qb43t"]
-material = SubResource("StandardMaterial3D_3ly3l")
-text = "ALL 2GETHER NOW !!
-(-u-)b"
-font_size = 32
+[node name="base-arm3" type="Node3D" parent="."]
 
-[sub_resource type="Gradient" id="Gradient_yetr5"]
-interpolation_mode = 1
-offsets = PackedFloat32Array(0, 0.57619, 0.771429)
-colors = PackedColorArray(0, 0, 0, 1, 0.43296, 0.3432, 0.66, 1, 1, 1, 1, 1)
+[node name="Armature" type="Node3D" parent="base-arm3"]
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_mofxj"]
-gradient = SubResource("Gradient_yetr5")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_lgj61"]
-render_priority = 0
-shader = ExtResource("9_4bfph")
-shader_parameter/dottiness = 0.6
-shader_parameter/dot_softness = 0.2
-shader_parameter/dot_radius = 0.005
-shader_parameter/rotation = 0.3
-shader_parameter/dot_color = Color(0, 0, 0, 1)
-shader_parameter/shading_gradient = SubResource("GradientTexture1D_mofxj")
-shader_parameter/albedo_texture = ExtResource("10_wifp3")
-
-[node name="3d" type="Node3D"]
-
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.422349, -0.249086, 0.871537, 0, 0.961502, 0.274798, -0.906433, -0.116061, 0.40609, -3.19644, 2.63669, 0.833866)
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.884215, 0.363082, 0.293827, -0.0510165, -0.700384, 0.711941, 0.464285, 0.614519, 0.637813, -0.0127452, 1.46862, 8.71116)
-shadow_enabled = true
-
-[node name="displays" type="Node3D" parent="."]
-
-[node name="crosshatch" type="Node3D" parent="displays"]
-
-[node name="label" type="MeshInstance3D" parent="displays/crosshatch"]
-transform = Transform3D(-4.2616e-08, -0.222467, 0.97494, -0.248588, 0.944336, 0.215484, -0.968609, -0.242359, -0.0553029, 2, 0.5, 3.2)
-mesh = SubResource("TextMesh_1evhe")
-skeleton = NodePath("../..")
-
-[node name="Cyoob" type="MeshInstance3D" parent="displays/crosshatch"]
-transform = Transform3D(0.0268388, -0.0137281, -0.799432, -0.0015357, 0.79988, -0.0137873, 0.799548, 0.00199713, 0.0268084, 2.01429, 0.384537, -1.31709)
-mesh = SubResource("BoxMesh_eac0l")
-skeleton = NodePath("../../../Camera3D")
-surface_material_override/0 = ExtResource("1_e6mx0")
-
-[node name="Floor" type="MeshInstance3D" parent="displays/crosshatch"]
-transform = Transform3D(0.655201, -0.335138, -19.5161, -0.03749, 19.5271, -0.336583, 19.519, 0.0487553, 0.654459, 0.974778, -0.657996, -1.30183)
-mesh = SubResource("PlaneMesh_lu46i")
-skeleton = NodePath("../../../Camera3D")
-surface_material_override/0 = SubResource("ShaderMaterial_7tfg7")
-
-[node name="Sphear" type="MeshInstance3D" parent="displays/crosshatch"]
-transform = Transform3D(-0.999998, 0.000282526, -0.00196436, 0.000278801, 0.999998, 0.00191175, 0.00196489, 0.00191119, -0.999996, 1.98163, 0.277658, 1.41971)
-mesh = SubResource("SphereMesh_k1bu4")
-skeleton = NodePath("../../..")
-surface_material_override/0 = ExtResource("1_e6mx0")
-
-[node name="Utah" type="MeshInstance3D" parent="displays/crosshatch"]
-transform = Transform3D(-0.772285, 0.000282526, 0.635276, 0.00143236, 0.999998, 0.00129648, -0.635274, 0.00191119, -0.772284, 1.97882, 0.00197455, 0.0287201)
-mesh = ExtResource("2_u5k0w")
-skeleton = NodePath("../../..")
-
-[node name="dotshade" type="Node3D" parent="displays"]
-
-[node name="label" type="MeshInstance3D" parent="displays/dotshade"]
-transform = Transform3D(-0.10268, -0.371399, 0.922778, 0.0426586, 0.925184, 0.377114, -0.993799, 0.0780866, -0.0791546, 0, 0.5, 3.2)
-mesh = SubResource("TextMesh_rtrm4")
-skeleton = NodePath("../..")
-
-[node name="Cyoob2" type="MeshInstance3D" parent="displays/dotshade"]
-transform = Transform3D(0.0268388, -0.0137281, -0.799432, -0.00153568, 0.79988, -0.0137873, 0.799548, 0.00199713, 0.0268084, 0.01429, 0.384537, -1.31709)
-mesh = SubResource("BoxMesh_eac0l")
-skeleton = NodePath("../../../Camera3D")
-surface_material_override/0 = ExtResource("3_l3kix")
-
-[node name="Sphear2" type="MeshInstance3D" parent="displays/dotshade"]
-transform = Transform3D(-0.999998, 0.000282496, -0.00196438, 0.000278801, 0.999998, 0.00191175, 0.00196488, 0.00191121, -0.999996, -0.0183699, 0.277658, 1.41971)
-mesh = SubResource("SphereMesh_k1bu4")
-skeleton = NodePath("../../..")
-surface_material_override/0 = ExtResource("3_l3kix")
-
-[node name="Utah2" type="MeshInstance3D" parent="displays/dotshade"]
-transform = Transform3D(-0.772285, 0.000282496, 0.635276, 0.00143236, 0.999998, 0.00129651, -0.635274, 0.00191121, -0.772284, -0.0211799, 0.00197446, 0.0287197)
-mesh = ExtResource("2_u5k0w")
-skeleton = NodePath("../../..")
-
-[node name="toon" type="Node3D" parent="displays"]
-
-[node name="label" type="MeshInstance3D" parent="displays/toon"]
-transform = Transform3D(0.303447, -0.184345, 0.934846, -0.0721551, 0.973844, 0.215456, -0.950112, -0.132833, 0.282208, -2, 0.5, 3.2)
-mesh = SubResource("TextMesh_mk0ca")
-skeleton = NodePath("../..")
-
-[node name="Cyoob3" type="MeshInstance3D" parent="displays/toon"]
-transform = Transform3D(0.0268388, -0.0137281, -0.799432, -0.00153568, 0.79988, -0.0137873, 0.799548, 0.00199714, 0.0268084, -1.98571, 0.384537, -1.31709)
-mesh = SubResource("BoxMesh_eac0l")
-skeleton = NodePath("../../../Camera3D")
-surface_material_override/0 = ExtResource("5_vue7t")
-
-[node name="Sphear3" type="MeshInstance3D" parent="displays/toon"]
-transform = Transform3D(-0.999998, 0.000282526, -0.00196439, 0.000278801, 0.999998, 0.00191174, 0.00196493, 0.00191119, -0.999996, -2.01837, 0.277658, 1.41971)
-mesh = SubResource("SphereMesh_k1bu4")
-skeleton = NodePath("../../..")
-surface_material_override/0 = ExtResource("5_vue7t")
-
-[node name="Utah3" type="MeshInstance3D" parent="displays/toon"]
-transform = Transform3D(-0.772285, 0.000282526, 0.635276, 0.00143234, 0.999998, 0.00129648, -0.635274, 0.00191119, -0.772284, -2.02118, 0.00197449, 0.0287204)
-mesh = ExtResource("2_u5k0w")
-skeleton = NodePath("../../..")
-
-[node name="toonwithdots" type="Node3D" parent="displays"]
-
-[node name="label" type="MeshInstance3D" parent="displays/toonwithdots"]
-transform = Transform3D(-0.0184433, -0.217285, 0.975934, 0.00440643, 0.976073, 0.217399, -0.99982, 0.0083105, -0.0170453, -4, 0.5, 3.86815)
-mesh = SubResource("TextMesh_8hm8i")
-skeleton = NodePath("../..")
-
-[node name="Cyoob3" type="MeshInstance3D" parent="displays/toonwithdots"]
-transform = Transform3D(0.0268388, -0.0137281, -0.799432, -0.00153568, 0.79988, -0.0137873, 0.799548, 0.00199714, 0.0268084, -3.98571, 0.384537, -1.31709)
-mesh = SubResource("BoxMesh_eac0l")
-skeleton = NodePath("../../../Camera3D")
-surface_material_override/0 = ExtResource("7_6k4li")
-
-[node name="Sphear3" type="MeshInstance3D" parent="displays/toonwithdots"]
-transform = Transform3D(-0.999998, 0.000282526, -0.00196439, 0.000278801, 0.999998, 0.00191174, 0.00196493, 0.00191119, -0.999996, -4.01837, 0.277658, 1.41971)
-mesh = SubResource("SphereMesh_k1bu4")
-skeleton = NodePath("../../..")
-surface_material_override/0 = ExtResource("7_6k4li")
-
-[node name="Utah3" type="MeshInstance3D" parent="displays/toonwithdots"]
-transform = Transform3D(-0.772285, 0.000282526, 0.635276, 0.00143234, 0.999998, 0.00129648, -0.635274, 0.00191119, -0.772284, -4.02118, 0.00197449, 0.0287204)
-mesh = ExtResource("2_u5k0w")
-skeleton = NodePath("../../..")
-
-[node name="toonwithcrosshatch" type="Node3D" parent="displays"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
-
-[node name="label" type="MeshInstance3D" parent="displays/toonwithcrosshatch"]
-transform = Transform3D(0.298822, -0.0143797, 0.954201, 0.155436, 0.987267, -0.0337996, -0.941565, 0.158418, 0.297252, -4, 0.355647, 3.86815)
-mesh = SubResource("TextMesh_41eo7")
-skeleton = NodePath("../..")
-
-[node name="Cyoob3" type="MeshInstance3D" parent="displays/toonwithcrosshatch"]
-transform = Transform3D(0.0268388, -0.0137281, -0.799432, -0.00153568, 0.79988, -0.0137873, 0.799548, 0.00199714, 0.0268084, -3.98571, 0.384537, -1.31709)
-mesh = SubResource("BoxMesh_eac0l")
-skeleton = NodePath("../../../Camera3D")
-surface_material_override/0 = ExtResource("9_svuxh")
-
-[node name="Sphear3" type="MeshInstance3D" parent="displays/toonwithcrosshatch"]
-transform = Transform3D(-0.999998, 0.000282526, -0.00196439, 0.000278801, 0.999998, 0.00191174, 0.00196493, 0.00191119, -0.999996, -4.01837, 0.277658, 1.41971)
-mesh = SubResource("SphereMesh_k1bu4")
-skeleton = NodePath("../../..")
-surface_material_override/0 = ExtResource("9_svuxh")
-
-[node name="Utah3" type="MeshInstance3D" parent="displays/toonwithcrosshatch"]
-transform = Transform3D(-0.772285, 0.000282526, 0.635276, 0.00143234, 0.999998, 0.00129648, -0.635274, 0.00191119, -0.772284, -4.02118, 0.00197449, 0.0287204)
-mesh = ExtResource("2_u5k0w")
-skeleton = NodePath("../../..")
-
-[node name="outline" type="Node3D" parent="displays"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
-
-[node name="label" type="MeshInstance3D" parent="displays/outline"]
-transform = Transform3D(-0.121419, 0.0530499, 0.991183, -0.0233458, 0.998142, -0.0562824, -0.992327, -0.0299727, -0.119956, -4, 0.355647, 3.86815)
-mesh = SubResource("TextMesh_hvi8d")
-skeleton = NodePath("../..")
-
-[node name="Cyoob3" type="MeshInstance3D" parent="displays/outline"]
-transform = Transform3D(1.35871, 40.4712, -0.694985, -0.0777438, 0.697984, 40.4939, 40.4771, -1.35717, 0.101105, -3.98571, 0.384537, -1.31709)
-mesh = SubResource("ArrayMesh_irgit")
-skeleton = NodePath("")
-script = ExtResource("13_ydg74")
-outline_width = 0.001
-
-[node name="Sphear3" type="MeshInstance3D" parent="displays/outline"]
-transform = Transform3D(-0.999998, 0.000282526, -0.00196439, 0.000278801, 0.999998, 0.00191174, 0.00196493, 0.00191119, -0.999996, -4.01837, 0.277658, 1.41971)
-mesh = SubResource("SphereMesh_k1bu4")
-skeleton = NodePath("../../..")
-script = ExtResource("13_ydg74")
-outline_width = 0.026053
-
-[node name="Utah4" type="MeshInstance3D" parent="displays/outline"]
-transform = Transform3D(-0.772285, 0.000282526, 0.635276, 0.00143234, 0.999998, 0.00129648, -0.635274, 0.00191119, -0.772284, -4.02118, 0.00197449, 0.0287204)
-mesh = ExtResource("2_u5k0w")
-skeleton = NodePath("../../..")
-script = ExtResource("13_ydg74")
-outline_width = 0.018
-
-[node name="Base-arm-prefab" type="Node3D" parent="displays/outline"]
-transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -4.02, 0.422669, -4.18161)
-
-[node name="base-arm3" type="Node3D" parent="displays/outline/Base-arm-prefab"]
-
-[node name="Armature" type="Node3D" parent="displays/outline/Base-arm-prefab/base-arm3"]
-
-[node name="Skeleton3D" type="Skeleton3D" parent="displays/outline/Base-arm-prefab/base-arm3/Armature"]
+[node name="Skeleton3D" type="Skeleton3D" parent="base-arm3/Armature"]
 bones/0/name = "Bicep"
 bones/0/parent = -1
 bones/0/rest = Transform3D(-1, -0.000396508, -3.49584e-05, -2.66577e-07, -0.0871564, 0.996209, -0.000398046, 0.996194, 0.0871577, 0, 0, 0)
 bones/0/enabled = true
-bones/0/position = Vector3(-0.243627, 0.112866, 0.0168921)
-bones/0/rotation = Quaternion(0.252337, 0.224978, 0.877644, 0.339782)
+bones/0/position = Vector3(-0.259232, 0.126411, 1.13505e-09)
+bones/0/rotation = Quaternion(0.30319, 0.307813, 0.797075, 0.421898)
 bones/0/scale = Vector3(0.999997, 1.00002, 1.00003)
 bones/1/name = "Forearm-guide"
 bones/1/parent = 0
 bones/1/rest = Transform3D(1, -0.000396629, 2.99003e-05, 0.000395928, 0.985395, -0.170284, 3.8076e-05, 0.170284, 0.985395, 5.0548e-11, 2.35126, -2.70775e-08)
 bones/1/enabled = true
 bones/1/position = Vector3(5.0548e-11, 2.35126, -2.70775e-08)
-bones/1/rotation = Quaternion(0.956594, -6.96251e-07, 0.00222713, 0.291414)
+bones/1/rotation = Quaternion(0.774232, -1.36117e-06, 0.0018019, 0.632899)
 bones/1/scale = Vector3(1, 0.999998, 1.00001)
 bones/2/name = "Forearm-pivot"
 bones/2/parent = 1
@@ -1783,35 +1481,35 @@ bones/3/parent = 1
 bones/3/rest = Transform3D(1, 6.07601e-09, -2.95984e-06, -1.61756e-08, 0.999994, -0.00341223, 2.9598e-06, 0.00341223, 0.999994, 6.08929e-09, 0.745001, 0.00254206)
 bones/3/enabled = true
 bones/3/position = Vector3(6.08929e-09, 0.745001, 0.00254206)
-bones/3/rotation = Quaternion(0.00151874, 0.455612, 0.00077734, 0.890177)
+bones/3/rotation = Quaternion(0.00154966, 0.418306, 0.00071369, 0.908305)
 bones/3/scale = Vector3(1, 1, 1)
 bones/4/name = "Wrist.L"
 bones/4/parent = 3
 bones/4/rest = Transform3D(0.964013, -0.0118664, -0.265589, 0.0157233, 0.999799, 0.0124006, 0.265388, -0.0161302, 0.964007, -0.1277, 1.57419, -0.000908079)
 bones/4/enabled = true
 bones/4/position = Vector3(-0.1277, 1.57419, -0.000908079)
-bones/4/rotation = Quaternion(0.0767604, -0.132913, 0.0155048, 0.988029)
+bones/4/rotation = Quaternion(0.044491, -0.133566, -0.0060664, 0.990022)
 bones/4/scale = Vector3(1, 1, 1)
 bones/5/name = "Wrist.R"
 bones/5/parent = 3
 bones/5/rest = Transform3D(1, -1.91256e-07, -2.74538e-06, 2.35518e-07, 0.99987, 0.0161314, 2.74194e-06, -0.0161314, 0.99987, 0.1277, 1.57419, -0.000909658)
 bones/5/enabled = true
 bones/5/position = Vector3(0.1277, 1.57419, -0.000909658)
-bones/5/rotation = Quaternion(0.0716165, 0.000164261, 0.0204896, 0.997222)
+bones/5/rotation = Quaternion(0.0340287, -4.76972e-05, -0.00577781, 0.999404)
 bones/5/scale = Vector3(1, 1, 1)
 bones/6/name = "Elbow-disc"
 bones/6/parent = 0
 bones/6/rest = Transform3D(1, -0.000396577, 2.71218e-05, 0.000395403, 0.985395, -0.170284, 4.08052e-05, 0.170284, 0.985395, 0.299038, 2.35138, 1.04226e-05)
 bones/6/enabled = true
 bones/6/position = Vector3(0.299038, 2.35138, 1.04226e-05)
-bones/6/rotation = Quaternion(0.550586, 9.17353e-05, 0.00017567, 0.834778)
+bones/6/rotation = Quaternion(-0.552781, -0.000125781, 0.000153086, 0.833327)
 bones/6/scale = Vector3(1, 1, 1)
 bones/7/name = "Palm"
 bones/7/parent = -1
 bones/7/rest = Transform3D(-1, 0, 1.19209e-06, 1.19209e-06, 0, 1, 0, 1, 0, -0.000932152, 0.00496209, 4.83945)
 bones/7/enabled = true
-bones/7/position = Vector3(0.432366, 0.233957, 1.24903)
-bones/7/rotation = Quaternion(0.313931, 0.738167, 0.0932872, -0.589791)
+bones/7/position = Vector3(0.667726, -0.143891, 2.92069)
+bones/7/rotation = Quaternion(0.345224, 0.763073, 0.4244, -0.344128)
 bones/7/scale = Vector3(1, 1, 1)
 bones/8/name = "Middle"
 bones/8/parent = 7
@@ -1978,299 +1676,16 @@ bones/31/name = "Elbow-IK-handle"
 bones/31/parent = -1
 bones/31/rest = Transform3D(-1, -2.13163e-14, 8.66252e-07, 7.54992e-08, -0.996195, 0.0871562, 8.62955e-07, 0.0871562, 0.996195, -0.00093216, -1.20112, 2.42947)
 bones/31/enabled = true
-bones/31/position = Vector3(-1.48027, -2.00097, 2.40509)
-bones/31/rotation = Quaternion(-0.0156348, 0.0370862, 0.968831, -0.244431)
+bones/31/position = Vector3(-1.89663, -1.39423, 2.44628)
+bones/31/rotation = Quaternion(-2.49789e-05, 0.0438029, 0.99904, -0.000616088)
 bones/31/scale = Vector3(1, 1, 1)
 
-[node name="base-arm" type="MeshInstance3D" parent="displays/outline/Base-arm-prefab/base-arm3/Armature/Skeleton3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00961041, 0)
+[node name="base-arm" type="MeshInstance3D" parent="base-arm3/Armature/Skeleton3D"]
 mesh = SubResource("ArrayMesh_vm2r8")
 skin = SubResource("Skin_5wr4n")
-script = ExtResource("13_ydg74")
-outline_width = -0.05
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="displays/outline/Base-arm-prefab/base-arm3"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="base-arm3"]
 libraries = {
 "": SubResource("AnimationLibrary_lret3")
 }
-script = ExtResource("11_27ubv")
-
-[node name="altogether" type="Node3D" parent="displays"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
-
-[node name="label" type="MeshInstance3D" parent="displays/altogether"]
-transform = Transform3D(-0.115452, 0.0650204, 0.991183, 0.077399, 0.99541, -0.0562824, -0.990293, 0.0702197, -0.119956, -3.9631, 1.04993, 3.8473)
-mesh = SubResource("TextMesh_qb43t")
-skeleton = NodePath("../..")
-
-[node name="Cyoob3" type="MeshInstance3D" parent="displays/altogether"]
-transform = Transform3D(1.35871, 40.4712, -0.694985, -0.0777438, 0.697984, 40.4939, 40.4771, -1.35717, 0.101105, -3.98571, 0.384537, -1.31709)
-mesh = SubResource("ArrayMesh_irgit")
-skeleton = NodePath("")
-surface_material_override/0 = ExtResource("7_6k4li")
-script = ExtResource("13_ydg74")
-outline_width = 0.001
-
-[node name="Sphear3" type="MeshInstance3D" parent="displays/altogether"]
-transform = Transform3D(-0.999998, 0.000282526, -0.00196439, 0.000278801, 0.999998, 0.00191174, 0.00196493, 0.00191119, -0.999996, -4.01837, 0.277658, 1.41971)
-mesh = SubResource("SphereMesh_k1bu4")
-skeleton = NodePath("../../..")
-surface_material_override/0 = ExtResource("7_6k4li")
-script = ExtResource("13_ydg74")
-outline_width = 0.026053
-
-[node name="Utah4" type="MeshInstance3D" parent="displays/altogether"]
-transform = Transform3D(-0.772285, 0.000282526, 0.635276, 0.00143234, 0.999998, 0.00129648, -0.635274, 0.00191119, -0.772284, -4.02118, 0.00197449, 0.0287204)
-mesh = ExtResource("2_u5k0w")
-skeleton = NodePath("../../..")
-surface_material_override/0 = ExtResource("7_6k4li")
-surface_material_override/1 = ExtResource("7_6k4li")
-script = ExtResource("13_ydg74")
-outline_width = 0.018
-
-[node name="Base-arm-prefab" type="Node3D" parent="displays/altogether"]
-transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -4.02, 0.422669, -4.18161)
-
-[node name="base-arm3" type="Node3D" parent="displays/altogether/Base-arm-prefab"]
-
-[node name="Armature" type="Node3D" parent="displays/altogether/Base-arm-prefab/base-arm3"]
-
-[node name="Skeleton3D" type="Skeleton3D" parent="displays/altogether/Base-arm-prefab/base-arm3/Armature"]
-bones/0/name = "Bicep"
-bones/0/parent = -1
-bones/0/rest = Transform3D(-1, -0.000396508, -3.49584e-05, -2.66577e-07, -0.0871564, 0.996209, -0.000398046, 0.996194, 0.0871577, 0, 0, 0)
-bones/0/enabled = true
-bones/0/position = Vector3(-0.243627, 0.112866, 0.0168921)
-bones/0/rotation = Quaternion(0.252337, 0.224978, 0.877644, 0.339782)
-bones/0/scale = Vector3(0.999997, 1.00002, 1.00003)
-bones/1/name = "Forearm-guide"
-bones/1/parent = 0
-bones/1/rest = Transform3D(1, -0.000396629, 2.99003e-05, 0.000395928, 0.985395, -0.170284, 3.8076e-05, 0.170284, 0.985395, 5.0548e-11, 2.35126, -2.70775e-08)
-bones/1/enabled = true
-bones/1/position = Vector3(5.0548e-11, 2.35126, -2.70775e-08)
-bones/1/rotation = Quaternion(0.956594, -6.96251e-07, 0.00222713, 0.291414)
-bones/1/scale = Vector3(1, 0.999998, 1.00001)
-bones/2/name = "Forearm-pivot"
-bones/2/parent = 1
-bones/2/rest = Transform3D(1, 5.90777e-09, 1.80475e-06, 2.50457e-10, 0.999994, -0.00341221, -1.80476e-06, 0.00341221, 0.999994, 3.30829e-11, -1.7698e-07, -4.77083e-08)
-bones/2/enabled = true
-bones/2/position = Vector3(3.30829e-11, -1.7698e-07, -4.77083e-08)
-bones/2/rotation = Quaternion(0.00170611, 9.02379e-07, -1.41433e-09, 0.999999)
-bones/2/scale = Vector3(1, 1, 1)
-bones/3/name = "Forearm"
-bones/3/parent = 1
-bones/3/rest = Transform3D(1, 6.07601e-09, -2.95984e-06, -1.61756e-08, 0.999994, -0.00341223, 2.9598e-06, 0.00341223, 0.999994, 6.08929e-09, 0.745001, 0.00254206)
-bones/3/enabled = true
-bones/3/position = Vector3(6.08929e-09, 0.745001, 0.00254206)
-bones/3/rotation = Quaternion(0.00151874, 0.455612, 0.00077734, 0.890177)
-bones/3/scale = Vector3(1, 1, 1)
-bones/4/name = "Wrist.L"
-bones/4/parent = 3
-bones/4/rest = Transform3D(0.964013, -0.0118664, -0.265589, 0.0157233, 0.999799, 0.0124006, 0.265388, -0.0161302, 0.964007, -0.1277, 1.57419, -0.000908079)
-bones/4/enabled = true
-bones/4/position = Vector3(-0.1277, 1.57419, -0.000908079)
-bones/4/rotation = Quaternion(0.0767604, -0.132913, 0.0155048, 0.988029)
-bones/4/scale = Vector3(1, 1, 1)
-bones/5/name = "Wrist.R"
-bones/5/parent = 3
-bones/5/rest = Transform3D(1, -1.91256e-07, -2.74538e-06, 2.35518e-07, 0.99987, 0.0161314, 2.74194e-06, -0.0161314, 0.99987, 0.1277, 1.57419, -0.000909658)
-bones/5/enabled = true
-bones/5/position = Vector3(0.1277, 1.57419, -0.000909658)
-bones/5/rotation = Quaternion(0.0716165, 0.000164261, 0.0204896, 0.997222)
-bones/5/scale = Vector3(1, 1, 1)
-bones/6/name = "Elbow-disc"
-bones/6/parent = 0
-bones/6/rest = Transform3D(1, -0.000396577, 2.71218e-05, 0.000395403, 0.985395, -0.170284, 4.08052e-05, 0.170284, 0.985395, 0.299038, 2.35138, 1.04226e-05)
-bones/6/enabled = true
-bones/6/position = Vector3(0.299038, 2.35138, 1.04226e-05)
-bones/6/rotation = Quaternion(0.550586, 9.17353e-05, 0.00017567, 0.834778)
-bones/6/scale = Vector3(1, 1, 1)
-bones/7/name = "Palm"
-bones/7/parent = -1
-bones/7/rest = Transform3D(-1, 0, 1.19209e-06, 1.19209e-06, 0, 1, 0, 1, 0, -0.000932152, 0.00496209, 4.83945)
-bones/7/enabled = true
-bones/7/position = Vector3(0.432366, 0.233957, 1.24903)
-bones/7/rotation = Quaternion(0.313931, 0.738167, 0.0932872, -0.589791)
-bones/7/scale = Vector3(1, 1, 1)
-bones/8/name = "Middle"
-bones/8/parent = 7
-bones/8/rest = Transform3D(1, 0, -2.38419e-07, -2.06483e-14, 1, -8.66054e-08, 2.38419e-07, 8.66054e-08, 1, -0.108304, 1.22299, 0.00289392)
-bones/8/enabled = true
-bones/8/position = Vector3(-0.108304, 1.22299, 0.00289392)
-bones/8/rotation = Quaternion(-0.669731, -8.16276e-08, -7.41946e-08, 0.742604)
-bones/8/scale = Vector3(1, 1, 1)
-bones/9/name = "Middle.001"
-bones/9/parent = 8
-bones/9/rest = Transform3D(1, -4.07518e-07, 1.12852e-06, 4.07518e-07, 1, 3.92244e-07, -1.12852e-06, -3.92243e-07, 1, -3.66333e-09, 0.344116, 1.53975e-10)
-bones/9/enabled = true
-bones/9/position = Vector3(-3.66333e-09, 0.344116, 1.53975e-10)
-bones/9/rotation = Quaternion(-0.669731, 3.12657e-07, 5.18555e-07, 0.742604)
-bones/9/scale = Vector3(1, 1, 1)
-bones/10/name = "Middle.002"
-bones/10/parent = 9
-bones/10/rest = Transform3D(1, 4.07518e-07, -2.32061e-06, -4.0752e-07, 1, -7.57161e-07, 2.32061e-06, 7.57162e-07, 1, 5.45649e-09, 0.292525, 2.78607e-10)
-bones/10/enabled = true
-bones/10/position = Vector3(5.45649e-09, 0.292525, 2.78607e-10)
-bones/10/rotation = Quaternion(-0.669731, -7.10448e-07, -9.24016e-07, 0.742604)
-bones/10/scale = Vector3(1, 1, 1)
-bones/11/name = "Index"
-bones/11/parent = 7
-bones/11/rest = Transform3D(0.992393, -0.123113, 4.15331e-05, 0.123113, 0.992393, 5.3503e-06, -4.18759e-05, -1.96336e-07, 1, -0.33956, 1.20505, -0.00733316)
-bones/11/enabled = true
-bones/11/position = Vector3(-0.33956, 1.20505, -0.00733316)
-bones/11/rotation = Quaternion(-0.667392, -0.0412236, 0.0458725, 0.742148)
-bones/11/scale = Vector3(1, 1, 1)
-bones/12/name = "Index.001"
-bones/12/parent = 11
-bones/12/rest = Transform3D(1, -1.41566e-07, -1.23205e-07, 1.41566e-07, 1, -2.27611e-07, 1.23205e-07, 2.27611e-07, 1, 3.69016e-08, 0.303585, 1.17325e-10)
-bones/12/enabled = true
-bones/12/position = Vector3(3.69016e-08, 0.303585, 1.17325e-10)
-bones/12/rotation = Quaternion(-0.668664, -7.81017e-08, 1.70791e-08, 0.743565)
-bones/12/scale = Vector3(1, 1, 1)
-bones/13/name = "Index.002"
-bones/13/parent = 12
-bones/13/rest = Transform3D(1, -3.72582e-08, -6.4424e-08, 3.72582e-08, 1, -2.61198e-07, 6.4424e-08, 2.61198e-07, 1, -2.2994e-08, 0.258071, -9.09495e-12)
-bones/13/enabled = true
-bones/13/position = Vector3(-2.2994e-08, 0.258071, -9.09495e-12)
-bones/13/rotation = Quaternion(-0.668664, -4.29842e-08, -2.71012e-08, 0.743565)
-bones/13/scale = Vector3(1, 1, 1)
-bones/14/name = "Ring"
-bones/14/parent = 7
-bones/14/rest = Transform3D(0.988338, 0.152279, -4.76315e-05, -0.152279, 0.988338, 7.36287e-06, 4.81972e-05, -2.37242e-08, 1, 0.129301, 1.19047, -0.0320887)
-bones/14/enabled = true
-bones/14/position = Vector3(0.129301, 1.19047, -0.0320887)
-bones/14/rotation = Quaternion(-0.67005, 0.0512986, -0.0565658, 0.738378)
-bones/14/scale = Vector3(1, 1, 1)
-bones/15/name = "Ring.001"
-bones/15/parent = 14
-bones/15/rest = Transform3D(1, -5.21547e-07, -1.88592e-07, 5.21547e-07, 1, 2.69412e-07, 1.88592e-07, -2.69412e-07, 1, -1.31743e-08, 0.314049, -9.80435e-10)
-bones/15/enabled = true
-bones/15/position = Vector3(-1.31743e-08, 0.314049, -9.80435e-10)
-bones/15/rotation = Quaternion(-0.672011, -2.77772e-07, 1.31005e-07, 0.740542)
-bones/15/scale = Vector3(1, 1, 1)
-bones/16/name = "Ring.002"
-bones/16/parent = 15
-bones/16/rest = Transform3D(1, 5.66247e-07, 2.11323e-07, -5.66247e-07, 1, -1.11604e-07, -2.11323e-07, 1.11604e-07, 1, 5.62143e-08, 0.266967, 1.3024e-09)
-bones/16/enabled = true
-bones/16/position = Vector3(5.62143e-08, 0.266967, 1.3024e-09)
-bones/16/rotation = Quaternion(-0.672011, 2.4084e-07, -1.08477e-07, 0.740542)
-bones/16/scale = Vector3(1, 1, 1)
-bones/17/name = "Pinky"
-bones/17/parent = 7
-bones/17/rest = Transform3D(0.961003, 0.276536, -8.07551e-05, -0.276536, 0.961003, 2.35147e-05, 8.41086e-05, -2.66008e-07, 1, 0.324497, 1.10534, -0.0819337)
-bones/17/enabled = true
-bones/17/position = Vector3(0.324497, 1.10534, -0.0819337)
-bones/17/rotation = Quaternion(-0.667681, 0.0941236, -0.103146, 0.731234)
-bones/17/scale = Vector3(1, 1, 1)
-bones/18/name = "Pinky.001"
-bones/18/parent = 17
-bones/18/rest = Transform3D(1, 1.26659e-06, 3.44113e-07, -1.26659e-06, 1, 1.26339e-07, -3.44113e-07, -1.2634e-07, 1, 1.13602e-07, 0.280087, 4.51109e-09)
-bones/18/enabled = true
-bones/18/position = Vector3(1.13602e-07, 0.280087, 4.51109e-09)
-bones/18/rotation = Quaternion(-0.674283, 5.64146e-07, -3.49591e-07, 0.738473)
-bones/18/scale = Vector3(1, 1, 1)
-bones/19/name = "Pinky.002"
-bones/19/parent = 18
-bones/19/rest = Transform3D(1, -1.08778e-06, -5.54026e-07, 1.08778e-06, 1, -1.45461e-07, 5.54026e-07, 1.45461e-07, 1, 2.08788e-08, 0.238095, 2.04091e-09)
-bones/19/enabled = true
-bones/19/position = Vector3(2.08788e-08, 0.238095, 2.04091e-09)
-bones/19/rotation = Quaternion(-0.674283, -5.71323e-07, 2.11884e-07, 0.738473)
-bones/19/scale = Vector3(1, 1, 1)
-bones/20/name = "Thumb"
-bones/20/parent = 7
-bones/20/rest = Transform3D(-0.721439, -0.496576, -0.482636, 0.234259, 0.480865, -0.844921, 0.651651, -0.72262, -0.230587, -0.348682, 0.279641, 0.000861155)
-bones/20/enabled = true
-bones/20/position = Vector3(-0.348682, 0.279641, 0.000861155)
-bones/20/rotation = Quaternion(-0.0344949, 0.840305, -0.393201, -0.371606)
-bones/20/scale = Vector3(1, 1, 1)
-bones/21/name = "Thumb.001"
-bones/21/parent = 20
-bones/21/rest = Transform3D(0.978696, 0.203459, 0.0275286, -0.16362, 0.691913, 0.703196, 0.124025, -0.69272, 0.710463, 8.9407e-08, 0.471996, -1.86265e-07)
-bones/21/enabled = true
-bones/21/position = Vector3(8.9407e-08, 0.471996, -1.86265e-07)
-bones/21/rotation = Quaternion(-0.254763, 0.0203797, 0.0748282, 0.963889)
-bones/21/scale = Vector3(1, 1, 1)
-bones/22/name = "Thumb.002"
-bones/22/parent = 21
-bones/22/rest = Transform3D(0.999994, -0.00104182, 0.00318547, 0.0012913, 0.996846, -0.0793468, -0.00309276, 0.0793504, 0.996842, -2.98023e-08, 0.440945, -1.49012e-07)
-bones/22/enabled = true
-bones/22/position = Vector3(-2.98023e-08, 0.440945, -1.49012e-07)
-bones/22/rotation = Quaternion(-0.500913, 0.387406, 0.0533371, 0.772113)
-bones/22/scale = Vector3(1, 1, 1)
-bones/23/name = "Wrist.R.target"
-bones/23/parent = 7
-bones/23/rest = Transform3D(1, 0, -7.86781e-06, 0, 1, 0, 7.86781e-06, 0, 1, 0.1277, 0.165872, 0.0164594)
-bones/23/enabled = true
-bones/23/position = Vector3(0.1277, 0.165872, 0.0164594)
-bones/23/rotation = Quaternion(0, -3.93391e-06, 0, 1)
-bones/23/scale = Vector3(1, 1, 1)
-bones/24/name = "Wrist.L.target"
-bones/24/parent = 7
-bones/24/rest = Transform3D(0.963968, 0, -0.266017, 0, 1, 0, 0.266017, 0, 0.963968, -0.131894, 0.165872, 0.0164597)
-bones/24/enabled = true
-bones/24/position = Vector3(-0.131894, 0.165872, 0.0164597)
-bones/24/rotation = Quaternion(0, -0.134223, 0, 0.990951)
-bones/24/scale = Vector3(1, 1, 1)
-bones/25/name = "Index-handle"
-bones/25/parent = 7
-bones/25/rest = Transform3D(0.992393, -0.123113, 4.15331e-05, 0.123113, 0.992393, 5.3503e-06, -4.18759e-05, -1.96336e-07, 1, -0.33956, 1.20505, -0.00733316)
-bones/25/enabled = true
-bones/25/position = Vector3(-0.33173, 1.17283, -0.0877696)
-bones/25/rotation = Quaternion(-0.657685, -0.125052, -0.0113233, 0.742755)
-bones/25/scale = Vector3(1, 1, 1)
-bones/26/name = "Middle-handle"
-bones/26/parent = 7
-bones/26/rest = Transform3D(1, 0, -2.38419e-07, -2.06483e-14, 1, -8.66054e-08, 2.38419e-07, 8.66054e-08, 1, -0.108304, 1.22299, 0.00289392)
-bones/26/enabled = true
-bones/26/position = Vector3(-0.111324, 1.22112, -0.0668846)
-bones/26/rotation = Quaternion(-0.664893, -0.0865416, -0.0535474, 0.739974)
-bones/26/scale = Vector3(1, 1, 1)
-bones/27/name = "Ring-handle"
-bones/27/parent = 7
-bones/27/rest = Transform3D(0.988338, 0.152279, -4.76315e-05, -0.152279, 0.988338, 7.36287e-06, 4.81972e-05, -2.37242e-08, 1, 0.129301, 1.19047, -0.0320887)
-bones/27/enabled = true
-bones/27/position = Vector3(0.1291, 1.16194, -0.0571591)
-bones/27/rotation = Quaternion(-0.671857, -0.031533, -0.0992103, 0.733329)
-bones/27/scale = Vector3(1, 1, 1)
-bones/28/name = "Pinky-handle"
-bones/28/parent = 7
-bones/28/rest = Transform3D(0.961003, 0.276536, -8.07551e-05, -0.276536, 0.961003, 2.35147e-05, 8.41086e-05, -2.66008e-07, 1, 0.324497, 1.10534, -0.0819337)
-bones/28/enabled = true
-bones/28/position = Vector3(0.318219, 1.03596, -0.0488379)
-bones/28/rotation = Quaternion(-0.674318, 0.0211189, -0.131593, 0.726314)
-bones/28/scale = Vector3(1, 1, 1)
-bones/29/name = "Thumb-handle"
-bones/29/parent = 7
-bones/29/rest = Transform3D(-0.721439, -0.496576, -0.482636, 0.234259, 0.480865, -0.844921, 0.651651, -0.72262, -0.230587, -0.348682, 0.279641, 0.000861155)
-bones/29/enabled = true
-bones/29/position = Vector3(-0.348682, 0.279641, 0.000861155)
-bones/29/rotation = Quaternion(0.229389, 0.900461, 0.0716702, -0.362511)
-bones/29/scale = Vector3(1, 1, 1)
-bones/30/name = "Bullet"
-bones/30/parent = 7
-bones/30/rest = Transform3D(-1, 0, -6.27833e-07, -2.38908e-13, 1, 3.80528e-07, 6.27833e-07, 3.80528e-07, -1, -1.00093, 1.16055, -0.00496089)
-bones/30/enabled = true
-bones/30/position = Vector3(-1.00093, 1.16055, -0.00496089)
-bones/30/rotation = Quaternion(5.9727e-14, -1, -1.90264e-07, 3.13916e-07)
-bones/30/scale = Vector3(1, 1, 1)
-bones/31/name = "Elbow-IK-handle"
-bones/31/parent = -1
-bones/31/rest = Transform3D(-1, -2.13163e-14, 8.66252e-07, 7.54992e-08, -0.996195, 0.0871562, 8.62955e-07, 0.0871562, 0.996195, -0.00093216, -1.20112, 2.42947)
-bones/31/enabled = true
-bones/31/position = Vector3(-1.48027, -2.00097, 2.40509)
-bones/31/rotation = Quaternion(-0.0156348, 0.0370862, 0.968831, -0.244431)
-bones/31/scale = Vector3(1, 1, 1)
-
-[node name="base-arm" type="MeshInstance3D" parent="displays/altogether/Base-arm-prefab/base-arm3/Armature/Skeleton3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00961041, 0)
-mesh = SubResource("ArrayMesh_vm2r8")
-skin = SubResource("Skin_5wr4n")
-surface_material_override/0 = SubResource("ShaderMaterial_lgj61")
-script = ExtResource("13_ydg74")
-outline_width = -0.05
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="displays/altogether/Base-arm-prefab/base-arm3"]
-libraries = {
-"": SubResource("AnimationLibrary_lret3")
-}
-script = ExtResource("11_27ubv")
+script = ExtResource("1_qqkci")
